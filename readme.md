@@ -20,10 +20,13 @@ Then run it like so:
 In a few seconds, the web server will no longer be accessible and requests will just hang. You may have to adjust the limit to take down bigger servers with more resources.
 
 ##Writeup for Blue Team
-To remedate against the Rappid reset vulnerability, the best course of action is to edit the docker file by changing the docker version to a known version to have protection against this attack. i.e. anything in the last two weeks. 
+To remedate against the Rappid reset vulnerability, the best course of action is to edit the docker file by changing the docker version to a known version to have protection against this attack. i.e. anything in the last two weeks. You can do this in github or by using nano or vim.
 
 Then kill the running docker file:
-    'test'
+    `docker ps`
+    `docker kill <CONTAINER ID>`
+    
+Then re-run the build and run commands above for the newly edited docker container.
 
 ## Notes
 
